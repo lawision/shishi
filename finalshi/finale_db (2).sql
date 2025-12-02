@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 01, 2025 at 08:19 AM
+-- Generation Time: Dec 02, 2025 at 03:10 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -330,7 +330,8 @@ INSERT INTO `user` (`user_id`, `first_name`, `last_name`, `address`, `contact_nu
 (5, 'clark kent', 'judilla', '', '', 40, 'admin@gmail.com', '$2y$10$vBOkVPF60PokiJu86Fn0XOziC4/PVBoCL/vUEXid7GlU4/7NIRPrq', '2025-11-23 08:32:28', 1),
 (6, 'clark kent', 'judilla', 'cabancalan', '09392389220', 40, 'clark@hhh.com', '$2y$10$j4Jo9k67JRchlB9NIFJoZ.HUcksXJM.By7zFdb5r.F1Gxpr/tZraC', '2025-11-27 10:32:03', 0),
 (7, 'clark kent', 'judilla', 'cabancalan', '09392389220', 40, 'clarky@hhh.com', '$2y$10$3X/V.mB8DNsOHeuUUsnyvO2AoHKt5PYTdwlopWKfKdJ4YnHOGt89a', '2025-11-29 00:32:46', 0),
-(8, 'alssadlfs', 'asdf', 'asdfsa', '123123123', 40, 'baba@gmail.com', '$2y$10$13GOkyE.6z.WZ3hlNriLruezX9664r/ovJVzhIt1mz1nhuDjVtG3C', '2025-11-29 04:46:18', 0);
+(8, 'alssadlfs', 'asdf', 'asdfsa', '123123123', 40, 'baba@gmail.com', '$2y$10$13GOkyE.6z.WZ3hlNriLruezX9664r/ovJVzhIt1mz1nhuDjVtG3C', '2025-11-29 04:46:18', 0),
+(9, 'louis', 'asdfas', 'lacion', '09121212122', 40, 'baulitaa@gmail.com', '$2y$10$/0eL7qF3gGI592Q7ofv42.hIuBWszcrNWtMLNbirYgaGQyIBye2Sq', '2025-12-01 07:36:39', 0);
 
 --
 -- Indexes for dumped tables
@@ -456,7 +457,7 @@ ALTER TABLE `settings`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Constraints for dumped tables
