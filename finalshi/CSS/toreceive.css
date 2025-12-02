@@ -1,0 +1,60 @@
+/* --- To Receive Page --- */
+
+body {
+    font-family: Arial, sans-serif;
+    background: #eef2f3;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #222;
+}
+
+.receive-card {
+    background: white;
+    border-radius: 12px;
+    padding: 18px;
+    margin-bottom: 20px;
+    box-shadow: 0px 3px 10px rgba(0,0,0,0.08);
+}
+
+.receive-card h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+}
+
+.receive-card p {
+    margin: 5px 0;
+    color: #444;
+    font-size: 14px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 12px;
+    background: #0fb9a8;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.btn:hover {
+    background: #0aa394;
+}
+
+@media (max-width: 600px) {
+    .receive-card {
+        padding: 15px;
+    }
+}

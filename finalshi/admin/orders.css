@@ -1,0 +1,244 @@
+/* ============================================= */
+/*                GLOBAL RESET                   */
+/* ============================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body.admin-page {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0D0D0D; /* Jet Black */
+  color: #F8F8F4;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ============================================= */
+/*                HEADER / NAVBAR                */
+/* ============================================= */
+.admin-header, .admin-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 40px;
+  background-color: #000;
+  border-bottom: 2px solid #C9A227;
+  box-shadow: 0 4px 12px rgba(201, 162, 39, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.admin-logo {
+  color: #C9A227;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.5rem;
+  margin-right: 30px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: #F8F8F4;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.nav-links li a.active,
+.nav-links li a:hover {
+  color: #000;
+  background-color: #C9A227;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.theme-btn {
+  background: #C9A227;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.theme-btn:hover {
+  background-color: #e4bf3f;
+}
+
+.btn-logout {
+  background-color: #FF4C4C;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-logout:hover {
+  background-color: #FF0000;
+}
+
+/* ============================================= */
+/*                 MAIN CONTAINER                */
+/* ============================================= */
+.admin-container {
+  padding: 120px 40px 40px 40px; /* offset for fixed navbar */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  color: #C9A227;
+  margin-bottom: 20px;
+}
+
+/* ============================================= */
+/*                     TABLE                     */
+/* ============================================= */
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #1C1C1C;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.admin-table thead tr {
+  background-color: #000;
+}
+
+.admin-table thead th {
+  color: #C9A227;
+  padding: 12px 10px;
+  text-align: left;
+  font-weight: 600;
+}
+
+.admin-table tbody tr {
+  border-bottom: 1px solid #2C2C2C;
+  transition: background 0.3s ease;
+}
+
+.admin-table tbody tr:hover {
+  background-color: #222;
+}
+
+.admin-table tbody td {
+  padding: 10px;
+  color: #F8F8F4;
+  vertical-align: middle;
+}
+
+.admin-table img.product-img {
+  width: 70px;
+  border-radius: 6px;
+}
+
+/* ============================================= */
+/*                 BUTTONS                       */
+/* ============================================= */
+.small-btn {
+  padding: 5px 12px;
+  border-radius: 4px;
+  background-color: #C9A227;
+  color: #000;
+  text-decoration: none;
+  font-size: 0.9em;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.small-btn:hover {
+  background-color: #e4bf3f;
+}
+
+.small-btn.danger {
+  background-color: #FF4C4C;
+  color: #fff;
+}
+
+.small-btn.danger:hover {
+  background-color: #FF0000;
+}
+
+/* ============================================= */
+/*                 FORM SELECT                   */
+/* ============================================= */
+select {
+  padding: 5px 8px;
+  border-radius: 6px;
+  border: 1px solid #2C2C2C;
+  background-color: #1C1C1C;
+  color: #F8F8F4;
+  font-weight: 600;
+  margin-right: 5px;
+}
+
+select:focus {
+  outline: none;
+  border-color: #C9A227;
+}
+
+/* ============================================= */
+/*                 RESPONSIVE                    */
+/* ============================================= */
+@media (max-width: 768px) {
+  .admin-container {
+    padding: 140px 20px 20px 20px; /* increased top padding for mobile navbar */
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .admin-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .admin-table thead {
+    display: none;
+  }
+
+  .admin-table tbody td {
+    display: block;
+    width: 100%;
+    padding: 12px 10px;
+  }
+
+  .admin-table tbody tr {
+    margin-bottom: 20px;
+    display: block;
+    border-bottom: 2px solid #2C2C2C;
+  }
+
+  .admin-table tbody td::before {
+    content: attr(data-label);
+    display: block;
+    font-weight: 700;
+    color: #C9A227;
+    margin-bottom: 5px;
+  }
+}

@@ -1,0 +1,210 @@
+/* ================= Jet Black Theme ================= */
+body.admin-page {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0D0D0D; /* Jet Black */
+  color: #F8F8F4;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ================= Header / Navbar ================= */
+header.admin-header {
+  display: flex;
+  justify-content: space-between; /* nav-left and logout at ends */
+  align-items: center; /* vertically align all items */
+  padding: 12px 40px;
+  background-color: #000;
+  border-bottom: 2px solid #C9A227;
+  box-shadow: 0 4px 12px rgba(201,162,39,0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.admin-logo {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #C9A227;
+  text-decoration: none;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 40px; /* space between logo and nav links */
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  align-items: center; /* vertically align links */
+}
+
+.nav-links li a {
+  color: #F8F8F4;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.nav-links li a.active,
+.nav-links li a:hover {
+  color: #000;
+  background-color: #C9A227;
+}
+
+/* Logout button inline with nav links */
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-right .btn-logout {
+  background-color: #FF4C4C;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-right .btn-logout:hover {
+  background-color: #FF0000;
+}
+
+/* ================= Main Container ================= */
+main.admin-container {
+  padding: 120px 40px 40px 40px; /* offset for fixed navbar */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Add Product Button Section */
+.add-product-btn {
+  margin-bottom: 30px;
+}
+
+/* ================= Table ================= */
+table.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #1C1C1C;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+table.admin-table thead tr {
+  background-color: #000;
+}
+
+table.admin-table thead th {
+  color: #C9A227;
+  padding: 12px 10px;
+  text-align: left;
+  font-weight: 600;
+}
+
+table.admin-table tbody tr {
+  border-bottom: 1px solid #2C2C2C;
+  transition: background 0.3s ease;
+}
+
+table.admin-table tbody tr:hover {
+  background-color: #222;
+}
+
+table.admin-table tbody td {
+  padding: 10px;
+  color: #F8F8F4;
+  vertical-align: middle;
+}
+
+table.admin-table img.product-img {
+  width: 70px;
+  border-radius: 6px;
+}
+
+/* ================= Buttons ================= */
+.small-btn {
+  padding: 5px 12px;
+  border-radius: 4px;
+  background-color: #C9A227;
+  color: #000;
+  text-decoration: none;
+  font-size: 0.9em;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.small-btn:hover {
+  background-color: #e4bf3f;
+}
+
+.small-btn.danger {
+  background-color: #FF4C4C;
+  color: #fff;
+}
+
+.small-btn.danger:hover {
+  background-color: #FF0000;
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 768px) {
+  main.admin-container {
+    padding: 140px 20px 20px 20px; /* increased top padding for mobile navbar */
+  }
+
+  .nav-left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-right {
+    margin-left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; /* keep logout to far right on mobile */
+    margin-top: 10px;
+  }
+
+  table.admin-table thead {
+    display: none;
+  }
+
+  table.admin-table tbody td {
+    display: block;
+    width: 100%;
+    padding: 12px 10px;
+  }
+
+  table.admin-table tbody tr {
+    display: block;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #2C2C2C;
+  }
+
+  table.admin-table tbody td::before {
+    content: attr(data-label);
+    display: block;
+    font-weight: 700;
+    color: #C9A227;
+    margin-bottom: 5px;
+  }
+}

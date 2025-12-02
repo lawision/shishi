@@ -1,0 +1,214 @@
+/* ================= GLOBAL RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body.admin-page {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0D0D0D; /* Jet Black */
+  color: #F8F8F4;
+  line-height: 1.6;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ================= NAVBAR ================= */
+.admin-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #000;
+  border-bottom: 2px solid #C9A227;
+  box-shadow: 0 4px 12px rgba(201,162,39,0.2);
+}
+
+.admin-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* align logo top */
+  padding: 12px 40px;
+  flex-direction: column; /* stack logo above links */
+  gap: 10px;
+}
+
+.admin-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #C9A227;
+  text-decoration: none;
+}
+
+.nav-left {
+  display: flex;
+  flex-direction: column; /* logo above links */
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.nav-links li a {
+  color: #F8F8F4;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.nav-links li a.active,
+.nav-links li a:hover {
+  color: #000;
+  background-color: #C9A227;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px; /* add space under nav links */
+}
+
+.theme-btn {
+  background-color: #C9A227;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.theme-btn:hover {
+  background-color: #e4bf3f;
+}
+
+.btn-logout {
+  background-color: #FF4C4C;
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-logout:hover {
+  background-color: #FF0000;
+}
+
+/* ================= MAIN CONTAINER ================= */
+.admin-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 140px 40px 40px 40px; /* offset for stacked navbar */
+}
+
+/* ================= TABLE ================= */
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #1C1C1C;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #2C2C2C;
+}
+
+.admin-table th {
+  background-color: #121212;
+  color: #C9A227;
+  font-weight: 600;
+}
+
+.admin-table tr:hover {
+  background-color: #2C2C2C;
+}
+
+.admin-table img.product-img {
+  width: 70px;
+  border-radius: 6px;
+}
+
+/* ================= BUTTONS ================= */
+.small-btn {
+  padding: 5px 12px;
+  border-radius: 4px;
+  background-color: #C9A227;
+  color: #000;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.small-btn:hover {
+  background-color: #e4bf3f;
+}
+
+.small-btn.danger {
+  background-color: #FF4C4C;
+  color: #fff;
+}
+
+.small-btn.danger:hover {
+  background-color: #FF0000;
+}
+
+/* ================= ADD PRODUCT BUTTON ================= */
+.add-product-btn {
+  margin-bottom: 25px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .admin-container {
+    padding: 160px 20px 20px 20px; /* more padding for stacked navbar */
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .admin-table thead {
+    display: none;
+  }
+
+  .admin-table tbody td {
+    display: block;
+    width: 100%;
+    padding: 12px 10px;
+  }
+
+  .admin-table tbody tr {
+    display: block;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #2C2C2C;
+  }
+
+  .admin-table tbody td::before {
+    content: attr(data-label);
+    display: block;
+    font-weight: 700;
+    color: #C9A227;
+    margin-bottom: 5px;
+  }
+}

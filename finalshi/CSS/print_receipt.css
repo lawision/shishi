@@ -1,0 +1,67 @@
+/* --- Receipt Printable Page --- */
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background: white;
+}
+
+.receipt {
+    max-width: 750px;
+    margin: 0 auto;
+    background: white;
+}
+
+h2 {
+    margin-bottom: 5px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.print-btn {
+    background: #0fb9a8;
+    color: white;
+    padding: 7px 12px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+.print-btn:hover {
+    background: #0aa394;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 18px;
+}
+
+table th {
+    background: #0fb9a8;
+    color: white;
+    padding: 10px;
+}
+
+table td {
+    padding: 9px;
+    border-bottom: 1px solid #ddd;
+}
+
+.total-box {
+    text-align: right;
+    margin-top: 15px;
+    font-size: 17px;
+}
+
+.total-box strong {
+    font-size: 18px;
+}
+
+@media print {
+    .print-btn { display: none; }
+    body { padding: 0; }
+}

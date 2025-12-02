@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #f4f7f6;
+    font-family: Arial, sans-serif;
+}
+
+.success-container {
+    max-width: 650px;
+    margin: 50px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.check-icon i {
+    font-size: 70px;
+    color: #1abc9c;
+}
+
+h1 {
+    margin-top: 10px;
+    font-size: 28px;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.order-box {
+    background: #eefcf8;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.order-box p {
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+.items-list {
+    margin-top: 20px;
+}
+
+.item-card {
+    display: flex;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.item-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.item-info {
+    text-align: left;
+    margin-left: 15px;
+}
+
+.item-info h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.item-info p {
+    margin: 5px 0;
+    color: #444;
+}
+
+.buttons {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    background: #1abc9c;
+    color: white;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #148f77;
+}
+
+.btn.outline {
+    background: transparent;
+    border: 2px solid #1abc9c;
+    color: #1abc9c;
+}
+
+.btn.outline:hover {
+    background: #1abc9c;
+    color: white;
+}
+
+/* Error box */
+.error-box {
+    padding: 20px;
+    background: #ffeaea;
+    border-radius: 10px;
+    color: #b30000;
+}
